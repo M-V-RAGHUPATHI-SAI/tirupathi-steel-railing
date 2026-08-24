@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@theme {
+  /* --- Brand palette (matches the approved banner/logo) --- */
+  --color-graphite-950: #141312;
+  --color-graphite-900: #191817;
+  --color-graphite-800: #201f1e;
+  --color-graphite-700: #2b2a29;
+  --color-graphite-600: #383736;
+  --color-graphite-500: #5f6162;
+  --color-graphite-400: #86888a;
+
+  --color-silver: #dadad8;
+  --color-paper: #f7f6f3;
+
+  --color-orange-700: #a04611;
+  --color-orange-600: #c2560f;
+  --color-orange-500: #e2681e;
+  --color-orange-400: #f3974e;
+  --color-orange-300: #f8bd8b;
+
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-label: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-graphite-950);
+    color: var(--color-silver);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+  }
+}
+
+@layer components {
+  /* Eyebrow / small-caps label used above section headings */
+  .eyebrow {
+    font-family: var(--font-label);
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-orange-500);
+    font-size: 0.8rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--font-label);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+
+  .btn-orange {
+    background-color: var(--color-orange-500);
+    color: #141312;
+  }
+  .btn-orange:hover { background-color: var(--color-orange-400); }
+
+  .btn-ghost {
+    background-color: transparent;
+    color: var(--color-silver);
+    border: 1.5px solid var(--color-graphite-500);
+  }
+  .btn-ghost:hover { border-color: var(--color-orange-500); color: var(--color-orange-400); }
+
+  .btn-outline-light {
+    background-color: transparent;
+    color: var(--color-paper);
+    border: 1.5px solid rgba(247,246,243,0.55);
+  }
+  .btn-outline-light:hover { border-color: var(--color-orange-400); color: var(--color-orange-400); }
+
+  /* Photo placeholder slot (swap-ready) */
+  .ph {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(
+      135deg,
+      var(--color-graphite-700),
+      var(--color-graphite-700) 10px,
+      var(--color-graphite-800) 10px,
+      var(--color-graphite-800) 20px
+    );
+    border: 1.5px dashed var(--color-graphite-500);
+    color: var(--color-graphite-400);
+    text-align: center;
+    overflow: hidden;
+  }
+  .ph-label {
+    font-family: var(--font-label);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Wire pattern background decoration - the brand's signature visual motif */
+  .wire-field {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+      100deg,
+      rgba(218,218,216,0.10) 0px,
+      rgba(218,218,216,0.10) 1px,
+      transparent 1px,
+      transparent 26px
+    );
+  }
+
+  .card {
+    background-color: var(--color-graphite-800);
+    border: 1px solid var(--color-graphite-600);
+    border-radius: 0.5rem;
+  }
+}
