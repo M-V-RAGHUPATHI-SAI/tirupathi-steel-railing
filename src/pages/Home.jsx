@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="relative overflow-hidden min-h-screen flex items-end">
+      <section className="relative overflow-hidden min-h-[85vh] flex items-end">
         <div className="absolute inset-0">
           <img
             src="/images/hero-invisible-grill.jpg"
