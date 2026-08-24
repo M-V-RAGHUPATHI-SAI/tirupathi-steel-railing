@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="relative overflow-hidden min-h-screen flex items-center">
+      <section className="relative overflow-hidden min-h-screen flex items-end">
         <div className="absolute inset-0">
           <img
             src="/images/hero-invisible-grill.jpg"
@@ -29,7 +29,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-graphite-950 via-transparent to-transparent" />
         </div>
 
-        <div className="relative max-w-[1240px] mx-auto px-5 md:px-8 py-20">
+        <div className="relative max-w-[1240px] mx-auto px-5 md:px-8 pt-24 pb-20 md:pb-28">
           <Reveal>
             <p className="eyebrow mb-4">Hyderabad&rsquo;s Invisible Grill Specialists</p>
             <h1 className="font-display font-bold text-paper text-[clamp(2.4rem,6vw,4.6rem)] leading-[1.05] max-w-2xl">
