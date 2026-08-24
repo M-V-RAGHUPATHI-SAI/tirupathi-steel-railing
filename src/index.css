@@ -130,4 +130,27 @@
     border: 1px solid var(--color-graphite-600);
     border-radius: 0.5rem;
   }
+
+  /* Hide scrollbar on horizontal snap carousels (testimonials) */
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Slow Ken Burns drift on hero background images */
+  .hero-zoom {
+    animation: hero-zoom 18s ease-in-out infinite alternate;
+  }
+  @keyframes hero-zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.08); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-zoom {
+    animation: none;
+  }
 }

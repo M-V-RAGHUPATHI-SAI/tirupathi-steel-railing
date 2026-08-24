@@ -74,3 +74,72 @@ export const FEATURES = [
   { name: "Balcony & Window Fit", sub: "Custom fit for all spaces" },
   { name: "Glass & Steel Railing", sub: "Modern and elegant look" },
 ];
+
+export const TRUST_POINTS = [
+  "Free On-Site Measurement",
+  "100% In-House Fabrication",
+  "SS 316 / 304 Grade Materials",
+  "Standing By Our Workmanship",
+];
+
+// Illustrative testimonials — swap in real customer quotes as they come in
+// (same swap-in idea as PhotoSlot: replace text/name/area, nothing else to touch).
+export const TESTIMONIALS = [
+  {
+    name: "Ramesh K.",
+    area: "Mansoorabad",
+    rating: 5,
+    quote: "Got the invisible grill done for our 3rd floor balcony. You genuinely can't see the wires from a distance but it feels solid when you lean on it. Clean job, finished in a day.",
+  },
+  {
+    name: "Swathi R.",
+    area: "Dilsukhnagar",
+    rating: 5,
+    quote: "We were worried grills would make the balcony feel like a cage. This mesh is barely visible and our kids can't push through it. Exactly what we wanted.",
+  },
+  {
+    name: "Anil Kumar",
+    area: "LB Nagar",
+    rating: 4,
+    quote: "Wire rope railing for our terrace came out neat — no rust after the first monsoon. Team was on time for the site visit and the actual install both.",
+  },
+  {
+    name: "Priya N.",
+    area: "Kothapet",
+    rating: 5,
+    quote: "Compared quotes from a few places and these guys were upfront about pricing before starting, no surprises later. Glass railing looks premium against our flooring.",
+  },
+  {
+    name: "Farhan S.",
+    area: "Vanasthalipuram",
+    rating: 5,
+    quote: "Steel balcony railing, powder coated finish — a year in and it still looks new. Would call them again for the terrace railing next.",
+  },
+];
+
+export const FAQS = [
+  {
+    q: "Will an invisible grill block airflow or access to my AC compressor?",
+    a: "No. The wire mesh is open enough for normal airflow, and we can build in an access section around AC units or vents when needed.",
+  },
+  {
+    q: "Is the wire actually strong enough to stop a child or pet leaning on it?",
+    a: "Yes — we use SS 316/304 grade wire and tension every run properly before handover, not just fix it loosely for looks.",
+  },
+  {
+    q: "Does the stainless steel wire rust or discolor over time?",
+    a: "SS 316/304 grade resists rust and staining far better than mild steel or cheaper alternatives, even through Hyderabad's monsoon.",
+  },
+  {
+    q: "How long does a typical installation take?",
+    a: "Most single balcony or window installs are completed in a day once measurements are taken and material is ready.",
+  },
+  {
+    q: "Can the railing or grill be custom-fit to an odd-shaped balcony?",
+    a: "Yes — height, spacing, and finish are all worked out during the free site visit, so it's fitted to your actual space, not a standard size.",
+  },
+  {
+    q: "Is the site visit and quote free?",
+    a: "Yes. We visit, measure, and quote before any work starts — no cost, no obligation.",
+  },
+];

@@ -3,7 +3,9 @@ import Layout from "../components/Layout";
 import Reveal from "../components/Reveal";
 import PhotoSlot from "../components/PhotoSlot";
 import FeatureStrip from "../components/FeatureStrip";
-import { BUSINESS, SERVICES, waLink } from "../data/business";
+import Testimonials from "../components/Testimonials";
+import Faq from "../components/Faq";
+import { BUSINESS, SERVICES, TRUST_POINTS, waLink } from "../data/business";
 
 const STEPS = [
   { n: "01", title: "Site Visit & Measurement", copy: "We visit your balcony or window and take precise measurements at no cost." },
@@ -21,7 +23,7 @@ export default function Home() {
           <img
             src="/images/hero-invisible-grill.jpg"
             alt="Invisible safety grill wire mesh on a high-rise balcony"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hero-zoom"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-graphite-950 via-graphite-950/75 to-graphite-950/25" />
           <div className="absolute inset-0 bg-gradient-to-t from-graphite-950 via-transparent to-transparent" />
@@ -50,6 +52,20 @@ export default function Home() {
               </a>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* TRUST BAR */}
+      <section className="bg-graphite-900 border-b border-graphite-700 py-6">
+        <div className="max-w-[1240px] mx-auto px-5 md:px-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+          {TRUST_POINTS.map((point) => (
+            <div key={point} className="flex items-center gap-2.5 text-silver text-sm">
+              <svg viewBox="0 0 20 20" className="w-4 h-4 text-orange-500 shrink-0" fill="currentColor">
+                <path d="M8.3 13.3 4.9 10l-1.4 1.4L8.3 16 17 7.3l-1.4-1.4z" />
+              </svg>
+              <span className="font-label tracking-wide">{point}</span>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -123,6 +139,37 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="relative bg-graphite-900 border-y border-graphite-700 py-16 md:py-20 overflow-hidden">
+        <div className="wire-field" />
+        <div className="relative max-w-[1240px] mx-auto px-5 md:px-8">
+          <Reveal>
+            <p className="eyebrow text-center mb-3">What Customers Say</p>
+            <h2 className="font-display font-semibold text-paper text-[clamp(1.6rem,3.6vw,2.4rem)] text-center mb-12">
+              Trusted Across Hyderabad
+            </h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <Testimonials />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-graphite-950 py-16 md:py-20">
+        <div className="max-w-[1240px] mx-auto px-5 md:px-8">
+          <Reveal>
+            <p className="eyebrow text-center mb-3">Questions</p>
+            <h2 className="font-display font-semibold text-paper text-[clamp(1.6rem,3.6vw,2.4rem)] text-center mb-12">
+              Frequently Asked
+            </h2>
+          </Reveal>
+          <Reveal delay={100}>
+            <Faq />
+          </Reveal>
         </div>
       </section>
 

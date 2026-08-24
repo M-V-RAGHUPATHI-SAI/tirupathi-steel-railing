@@ -6,7 +6,7 @@ export default function PhotoSlot({ src, alt = "", label, ratio = "aspect-[4/3]"
           src={src}
           alt={alt}
           loading="lazy"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
     );
